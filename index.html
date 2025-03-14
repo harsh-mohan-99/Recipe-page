@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Recipe page</title>
+  <style>
+    @font-face {
+      font-family: Outfit-variable;
+      src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+    }
+
+    @font-face {
+      font-family: young-serif;
+      src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: hsl(30, 54%, 90%);
+    }
+
+    main {
+      margin: 120px auto;
+      width: 745px;
+      border-radius: 20px;
+      background: hsl(330, 100%, 98%);
+      padding: 40px;
+      background: hsl(0, 0%, 100%);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-family: young-serif;
+      font-size: 1.8em;
+      margin-top: 30px;
+      color: hsl(24, 5%, 18%);
+      font-weight: 500;
+    }
+
+    p.intro {
+      font-family: Outfit-variable;
+      margin-top: 20px;
+      font-size: .8rem;
+      font-weight: 500;
+      line-height: 20px;
+      color: hsl(30, 10%, 34%);
+    }
+
+    div.time-div {
+      background: hsl(330, 100%, 98%);
+      padding: 25px;
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+
+    span.time-head {
+      font-family: outfit-variable;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: hsl(332, 51%, 32%);
+    }
+
+    ul.time {
+      padding: 0px 20px;
+      font-family: outfit-variable;
+      font-size: .8rem;
+      font-weight: 400;
+    }
+
+    ul.time li {
+      margin-top: 15px;
+      padding-left: 17px;
+    }
+
+    li::marker {
+      font-size: .8rem;
+      color: hsl(14, 45%, 36%);
+    }
+
+    span#phead {
+      font-family: outfit-variable;
+      color: hsl(30, 10%, 34%)
+    }
+
+    span#pinfo {
+      font-family: outfit-variable;
+      color: hsl(30, 10%, 34%);
+      font-weight: 500;
+    }
+
+    h2 {
+      font-family: young-serif;
+      color: hsl(14, 45%, 36%);
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    ul.Ingredients {
+      padding-left: 23px;
+      padding-bottom: 30px;
+      margin: 20px 0px;
+      border-bottom: 1px solid hsla(32, 10%, 34%, 0.20);
+      font-family: Outfit-variable;
+      font-size: .8rem;
+      color: hsl(30, 10%, 34%);
+    }
+
+    ul.Ingredients li {
+      padding-left: 10px;
+      margin-top: 10px;
+    }
+
+    ol.odered {
+      padding-left: 18px;
+      margin-top: 20px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid hsl(30, 10%, 34%, .20);
+    }
+
+    ol.odered li {
+      padding-left: 15px;
+      margin-top: 10px;
+    }
+
+    ol.odered li::marker {
+      font-size: 13px;
+      font-family: Outfit-variable;
+      font-weight: 700;
+    }
+
+    span#ihead {
+      font-family: Outfit-variable;
+      color: hsl(30, 10%, 34%);
+      font-size: .8rem;
+    }
+
+    span#iinfo {
+      font-family: Outfit-variable;
+      color: hsl(30, 10%, 34%);
+      font-size: .8rem;
+      font-weight: 500;
+    }
+
+    p.info {
+      margin-top: 20px;
+      color: hsl(30, 10%, 34%);
+      font-family: Outfit-variable;
+      font-size: .8rem;
+      font-weight: 500;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%; 
+      margin-top: 10px;
+    }
+    
+    table td {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin: -50px;
+    }
+    
+    tr {
+      border-bottom: 1px solid hsl(30, 10%, 34%, .20);
+    }
+    tr.botom{
+      border: none;
+    }
+    span#heading {
+      font-size: .9rem;
+      font-family: Outfit-variable;
+      color: hsl(30, 10%, 34%);
+      padding-left: 25px;
+      font-weight: 500;
+    }
+
+    span#data {
+      font-family: Outfit-variable;
+      font-size: .9rem;
+      color: hsl(14, 45%, 36%);
+      font-weight: 800;
+    }
+
+    footer {
+      font-size: 11px;
+      text-align: center;
+      border: 2px solid;
+    }
+
+    footer a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @media (max-width:375px) {
+      main{
+        width: 100%;
+        border-radius: 0px;
+        padding: 0px;
+        margin: 0;
+
+      }
+      img{
+        width: 100%;
+        border-radius: 0px;
+      }
+      div.responsive{
+        padding: 0px 25px;
+        padding-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <img src="assets/images/image-omelette.jpeg" alt="omelette-image">
+    <div class="responsive">
+    <h1>Simple Omelette Recipe</h1>
+
+    <p class="intro"> An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
+      to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+
+    <div class="time-div">
+      <span class="time-head">Preparation time</span>
+      <ul class="time">
+        <li><span id="phead"><b>Total:</b></span><span id="pinfo"> Approximately 10 minutes</span> </li>
+        <li><span id="phead"><b> Preparation:</b></span><span id="pinfo"> 5 minutes</span> </li>
+        <li><span id="phead"><b>Cooking:</b></span> <span id="pinfo"> 5 minutes</span></li>
+      </ul>
+    </div>
+
+    <h2>Ingredients</h2>
+    <ul class="Ingredients">
+      <li>2-3 large eggs</li>
+      <li>Salt, to taste</li>
+      <li>Pepper, to taste</li>
+      <li> 1 tablespoon of butter or oil</li>
+      <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+    </ul>
+    <h2>Instructions</h2>
+    <ol class="odered">
+      <li><span id="ihead"><b>Beat the eggs:</b></span> <span id="iinfo">In a bowl, beat the eggs with a pinch of salt
+          and pepper until they are well mixed.
+          You can add a tablespoon of water or milk for a fluffier texture.</span></li>
+      <li><span id="ihead"><b>Heat the pan:</b></span> <span id="iinfo">Place a non-stick frying pan over medium Heat
+          and add butter or oil.</span></li>
+      <li><span id="ihead"><b>Cook the omelette:</b> </span><span id="iinfo">Once the butter is melted and bubbling,
+          pour in the eggs. Tilt the pan to ensure
+          the eggs evenly coat the surface.</span></li>
+      <li> <span id="ihead"><b>Add fillings (optional):</b></span><span id="iinfo">When the eggs begin to set at the
+          edges but are still slightly runny in the
+          middle, sprinkle your chosen fillings over one half of the omelette.</span></li>
+      <li><span id="ihead"><b>Fold and serve:</b></span> <span id="iinfo">As the omelette continues to cook, carefully
+          lift one edge and fold it over the
+          fillings. Let it cook for another minute, then slide it onto a plate.</span></li>
+      <li>
+        <span id="ihead"><b>Enjoy:</b></span> <span id="iinfo">Serve hot, with additional salt and pepper if
+          needed.</span>
+      </li>
+    </ol>
+
+    <h2>Nutrition</h2>
+    <p class="info">The table below shows nutritional values per serving without the additional fillings.</p>
+    <table>
+
+      <tr>
+        <td><span id="heading">Calories</span></td>
+        <td><span id="data">277kcal</span></td>
+      </tr>
+      <tr>
+        <td><span id="heading">Carbs</span></td>
+        <td><span id="data">0g</span></td>
+      </tr>
+      <tr>
+        <td><span id="heading">Protein</span></td>
+        <td><span id="data">20g</span></td>
+      </tr>
+      <tr class="botom">
+        <td><span id="heading">Fat</span></td>
+        <td><span id="data">22g</span></td>
+      </tr>
+    </table>
+  </div>
+  </main>
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Harsh sahni</a>.
+  </footer>
+</body>
+
+</html>
